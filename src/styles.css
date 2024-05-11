@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    margin: 0 auto;   /* Centers the content and removes default margin */
+    max-width: 1200px; /* Or whatever maximum width you prefer */
+    padding: 0 15px;  /* Adds padding to the left and right */
+}
