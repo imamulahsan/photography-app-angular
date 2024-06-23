@@ -3,6 +3,19 @@
     height: 100px;
     width: auto; /* Maintain aspect ratio */
 }
+
+.hover-effect {
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease;
+  }
+
+.hover-effect:hover {
+    filter: grayscale(100%); /* For grayscale effect */
+    filter: invert(100%); 
+  }
+
+  
 @media (max-width: 768px) {
     .navbar-brand img {
         height: 20px; /* Smaller logo for smaller devices */
