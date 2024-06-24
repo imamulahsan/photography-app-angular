@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,13 +6,13 @@ import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  @ViewChild('cursor') cursor!: ElementRef;
 
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    this.cursor.nativeElement.style.left = `${event.clientX}px`;
-    this.cursor.nativeElement.style.top = `${event.clientY}px`;
-  }
+  images = [
+    'assets/images/carousal-1.jpg',
+    'assets/images/carousal-2.jpg',
+    'assets/images/carousal-3.jpg'
+  ];
+ 
 
   constructor() {}
 }

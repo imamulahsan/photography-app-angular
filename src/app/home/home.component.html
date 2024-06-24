@@ -1,7 +1,8 @@
-<div class="cursor" #cursor></div>
-<div (mousemove)="onMouseMove($event)">
-  <h1 class="hover-effect">Photographer & Film Maker</h1>
-  <p class="hover-effect">Berlin, Germany</p>
-  <button class="hire-me-button hover-effect">HIRE ME</button>
+<div class="container mt-4">
+  <carousel [interval]="2000"> <!-- Auto slide every 2 seconds -->
+    <slide *ngFor="let image of images">
+      <img [src]="image" alt="Street Photography" class="d-block w-100">
+    </slide>
+  </carousel>
 </div>
 

@@ -1,42 +1,4 @@
-body, html {
-    cursor: none;
-    overflow: hidden;
-  }
-  
-  .cursor {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: background-color 0.3s, transform 0.1s;
-    z-index: 1000;
-  }
-  
-  .hover-effect {
-    color: black;
-    display: inline-block;
-    transition: color 0.3s, background-color 0.3s;
-  }
-  
-  .hover-effect:hover {
-    color: white !important;
-    background-color: black !important;
-  }
-  
-  .hire-me-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .hire-me-button:hover {
-    background-color: gray;
-  }
-  
+.carousel img {
+  height: 300px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the container */
+}
