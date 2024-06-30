@@ -1,8 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-    margin: 0 auto;   /* Centers the content and removes default margin */
-    max-width: 1200px; /* Or whatever maximum width you prefer */
-    padding: 0 15px;  /* Adds padding to the left and right */
+  margin: 0;  /* Remove default margin */
+  padding: 0;  /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+:root {
+  --background-color-day: #ffffff;
+  --text-color-day: #000000;
+  --background-color-night: #000000;
+  --text-color-night: #ffffff;
+}
+
+body.day-mode {
+  background-color: var(--background-color-day);
+  color: var(--text-color-day);
+}
+
+body.night-mode {
+  background-color: var(--background-color-night);
+  color: var(--text-color-night);
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.btn-link {
+  color: inherit; /* Ensure button color inherits from the current theme */
+  text-decoration: none; /* Remove underline from link styled button */
 }

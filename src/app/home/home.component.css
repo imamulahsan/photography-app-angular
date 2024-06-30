@@ -11,7 +11,6 @@
 }
 
 .glass-header {
-  background-color: rgba(251, 251, 245, 0.3); /* Light translucent background */
   backdrop-filter: blur(10px); /* Blur effect for glass-like appearance */
   padding: 20px;
   text-align: center;
@@ -38,7 +37,6 @@
 
 .glass-header p {
   font-size: 20px; /* Adjust as needed */
-  color: #666;
   margin-top: 10px;
 }
 
