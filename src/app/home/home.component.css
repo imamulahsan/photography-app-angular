@@ -45,3 +45,26 @@
   content: '"';
   font-size: 24px;
 }
+
+/* home.component.css */
+.service-section {
+  padding: 3rem 0;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}

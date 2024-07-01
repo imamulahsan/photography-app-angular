@@ -11,3 +11,24 @@
   <p>{{ 'HOME_DESCRIPTION' | translate }}</p>
 </header>
 
+
+<!-- Service Section -->
+<div id="service-section" class="service-section container mt-5">
+  <h2 class="text-center">{{ 'SERVICE_TITLE' | translate }}</h2>
+  <p class="text-center">{{ 'SERVICE_DESCRIPTION' | translate }}</p>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let service of services">
+      <div class="card mb-4 shadow-sm">
+        <img [src]="service.image" class="card-img-top" alt="{{ service.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ service.title }}</h5>
+          <p class="card-text">{{ service.description }}</p>
+          <p class="card-text"><strong>Price: {{ service.price }}</strong></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

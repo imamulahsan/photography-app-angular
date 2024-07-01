@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ThemeService } from '../../theme.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public themeService: ThemeService, private translate: TranslateService, private cdr: ChangeDetectorRef) {}
+  constructor(public themeService: ThemeService, private translate: TranslateService, private cdr: ChangeDetectorRef, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
     this.themeService.currentMode.subscribe(isNightMode => {
@@ -37,5 +38,9 @@ export class HeaderComponent implements OnInit {
       console.log('Language switched to:', language);
       this.cdr.detectChanges(); // Manually trigger change detection
     });
+  }
+
+  scrollToSection(section: string) {
+    this.viewportScroller.scrollToAnchor(section);
   }
 }
