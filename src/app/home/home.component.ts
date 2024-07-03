@@ -15,26 +15,26 @@ export class HomeComponent {
 
   services = [
     {
-      title: 'Weddings',
-      description: 'Have a worry-free wedding day from start to finish with our services. Our team will handle all your needs.',
+      title: 'Graffiti Art',
+      description: 'Custom graffiti designs for private and public clients.',
       price: '$120',
       image: 'assets/images/wedding.jpg'
     },
     {
-      title: 'Engagements',
-      description: 'Engagement sessions allow you to get up close and personal with your photographer, which will help you feel more comfortable.',
+      title: 'Live Painting Events',
+      description: 'Live art creation for corporate events, product launches, and team-building activities.',
       price: '$90',
       image: 'assets/images/engagement.jpg'
     },
     {
-      title: 'Birthdays',
-      description: 'Why not add a little flair to your next event? Let our photographers capture the perfect moments of your special day.',
+      title: ' Street Art Tours',
+      description: 'Tours of famous street art locations in German cities, providing historical context and artist insights.',
       price: '$120',
       image: 'assets/images/birthday.jpg'
     },
     {
-      title: 'Portraits',
-      description: 'Your family and your business are so important to you, which is why we take timeless portraits that you will cherish forever.',
+      title: 'Street Art Courses',
+      description: 'Workshops on the history and techniques of street art for schools and interested groups.',
       price: '$100',
       image: 'assets/images/portrait.jpg'
     }
