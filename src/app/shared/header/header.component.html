@@ -1,44 +1,43 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="../../../assets/images/nav-logo.png" alt="Urban Ink Logo" class="hover-effect">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="d-flex justify-content-end w-100">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/home" routerLinkActive="active">{{ 'HOME' | translate }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="scrollToSection('service-section')" routerLink="/home" routerLinkActive="active">{{ 'SERVICES' | translate }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/about" routerLinkActive="active">{{ 'ABOUT' | translate }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
-            </li>
-            <li class="nav-item">
-              <button (click)="toggleTheme()" class="btn btn-link">
-                <i [class]="themeService.isNightMode ? 'fas fa-moon' : 'fas fa-sun'"></i>
-              </button>
-            </li>
-            <li class="nav-item">
-              <button (click)="switchLanguage('en')" class="btn btn-link">
-                <img src="../../../assets/images/uk-flag.png" alt="English" width="30">
-              </button>
-            </li>
-            <li class="nav-item">
-              <button (click)="switchLanguage('de')" class="btn btn-link">
-                <img src="../../../assets/images/germany-flag.png" alt="German" width="30">
-              </button>
-            </li>
-          </ul>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/images/nav-logo.png" alt="Urban Ink Logo" class="hover-effect">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="d-flex justify-content-end w-100">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active">{{ 'HOME' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('service-section')" routerLink="/" routerLinkActive="active">{{ 'SERVICES' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('about-section')" routerLink="/" routerLinkActive="active">{{ 'ABOUT' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <button (click)="toggleTheme()" class="btn btn-link">
+              <i [class]="themeService.isNightMode ? 'fas fa-moon' : 'fas fa-sun'"></i>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button (click)="switchLanguage('en')" class="btn btn-link">
+              <img src="../../../assets/images/uk-flag.png" alt="English" width="30">
+            </button>
+          </li>
+          <li class="nav-item">
+            <button (click)="switchLanguage('de')" class="btn btn-link">
+              <img src="../../../assets/images/germany-flag.png" alt="German" width="30">
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
-  </nav>
-  
+  </div>
+</nav>

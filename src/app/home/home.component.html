@@ -35,11 +35,21 @@
 
 
 <!-- About us -->
-<div id="service-section" class="service-section container mt-5">
-  <h2 class="text-center">{{ 'SERVICE_TITLE' | translate }}</h2>
-  <p class="text-center">{{ 'SERVICE_DESCRIPTION' | translate }}</p>
-  <div class="row">
-    
+<div id="about-section" class="about-section container mt-5">
+  <h2 class="text-center">{{ 'ABOUT_TITLE' | translate }}</h2>
+  <p class="text-center">{{ 'ABOUT_DESCRIPTION' | translate }}</p>
+  <div class="row align-items-center">
+    <!-- Left Column - Image -->
+    <div class="col-md-6 text-center animate-left">
+      <img src="assets/images/about-us.jpg" alt="About Us" class="img-fluid rounded">
+    </div>
+    <!-- Right Column - Description -->
+    <div class="col-md-6 animate-right">
+      <h3>{{ 'ABOUT_US_HEADING' | translate }}</h3>
+      <p>{{ 'ABOUT_US_DESCRIPTION' | translate }}</p>
+    </div>
   </div>
 </div>
+
+
 

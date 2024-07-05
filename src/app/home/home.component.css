@@ -68,3 +68,39 @@
 .card-text {
   font-size: 0.9rem;
 }
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Delay animations */
+.animate-left {
+  animation: slideInLeft 1s ease-out;
+  animation-delay: 0.9s; /* Adjust the delay as needed */
+}
+
+.animate-right {
+  animation: slideInRight 1s ease-out;
+  animation-delay: 0.9s; /* Adjust the delay as needed */
+}
+

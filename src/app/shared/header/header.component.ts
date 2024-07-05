@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { ThemeService } from '../../theme.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ViewportScroller } from '@angular/common';
@@ -8,7 +8,7 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
   constructor(public themeService: ThemeService, private translate: TranslateService, private cdr: ChangeDetectorRef, private viewportScroller: ViewportScroller) {}
 
@@ -26,6 +26,32 @@ export class HeaderComponent implements OnInit {
         document.querySelector('.navbar')?.classList.remove('night-mode');
       }
     });
+  }
+
+  ngAfterViewInit() {
+    const leftColumn = document.getElementById('leftColumn');
+    const rightColumn = document.getElementById('rightColumn');
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    if (leftColumn) {
+      observer.observe(leftColumn);
+    }
+    if (rightColumn) {
+      observer.observe(rightColumn);
+    }
   }
 
   toggleTheme() {
