@@ -13,33 +13,44 @@ export class HomeComponent {
     'assets/images/carousal-3.jpg'
   ];
 
+  timelineEvents = [
+    { year: '2004', content: 'TIMELINE_2004', isActive: true},
+    { year: '2007', content: 'TIMELINE_2007', isActive: true },
+    { year: '2007', content: 'TIMELINE_2007', isActive: true },
+    { year: '2007', content: 'TIMELINE_2007', isActive: true },
+    { year: '2007', content: 'TIMELINE_2007', isActive: true },
+    // Add more timeline events as needed
+  ];
+
   services = [
     {
       title: 'Graffiti Art',
       description: 'Custom graffiti designs for private and public clients.',
-      price: '$120',
-      image: 'assets/images/wedding.jpg'
+      image: 'assets/images/graffiti.jpg',
+      path: 'graffiti'
     },
     {
       title: 'Live Painting Events',
       description: 'Live art creation for corporate events, product launches, and team-building activities.',
-      price: '$90',
-      image: 'assets/images/engagement.jpg'
+      image: 'assets/images/live-art.jpg',
+      path: 'live-painting'
     },
     {
-      title: ' Street Art Tours',
+      title: 'Street Art Tours',
       description: 'Tours of famous street art locations in German cities, providing historical context and artist insights.',
-      price: '$120',
-      image: 'assets/images/birthday.jpg'
+      image: 'assets/images/street-art.jpg',
+      path: 'street-art-tours'
     },
     {
       title: 'Street Art Courses',
       description: 'Workshops on the history and techniques of street art for schools and interested groups.',
-      price: '$100',
-      image: 'assets/images/portrait.jpg'
+      image: 'assets/images/art-course.jpg',
+      path: 'street-art-courses'
     }
   ];
  
 
   constructor() {}
+
+
 }

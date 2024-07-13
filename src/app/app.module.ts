@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { GraffitiComponent } from './graffiti/graffiti.component';
+import { LivePaintingComponent } from './live-painting/live-painting.component';
+import { StreetArtToursComponent } from './street-art-tours/street-art-tours.component';
+import { StreetArtCoursesComponent } from './street-art-courses/street-art-courses.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,7 +25,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GraffitiComponent,
+    LivePaintingComponent,
+    StreetArtToursComponent,
+    StreetArtCoursesComponent
   ],
   imports: [
     BrowserModule,

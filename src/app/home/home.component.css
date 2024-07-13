@@ -104,3 +104,56 @@
   animation-delay: 0.9s; /* Adjust the delay as needed */
 }
 
+/* about-section.component.css */
+.timeline {
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--text-color-day);
+}
+
+.timeline-item {
+  margin: 10px 0;
+  color: var(--text-color-day);
+}
+
+.timeline-year.bubble {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #514f31;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.timeline-year.bubble:hover {
+  background-color: #387613;
+}
+
+.timeline-content {
+  display: inline-block;
+  vertical-align: top;
+  background-color: var(--background-color-day);
+  color: var(--text-color-day);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Night mode overrides */
+.night-mode .timeline {
+  background-color: var(--background-color-night);
+  color: var(--text-color-night);
+}
+
+.night-mode .timeline-item {
+  color: var(--text-color-night);
+}
+
+.night-mode .timeline-content {
+  background-color: var(--background-color-night);
+  color: var(--text-color-night);
+}

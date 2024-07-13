@@ -1,0 +1,33 @@
+.quilted-image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .quilted-image-list div {
+    position: relative;
+  }
+  
+  .quilted-image-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Define different sizes for the images */
+  .quilted-image-list .large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .quilted-image-list .medium {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .quilted-image-list .small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  

@@ -14,7 +14,7 @@
 
 <!-- Service Section -->
 <div id="service-section" class="service-section container mt-5">
-  <h2 class="text-center">{{ 'SERVICE_TITLE' | translate }}</h2>
+  <h1 class="text-center">{{ 'SERVICE_TITLE' | translate }}</h1>
   <p class="text-center">{{ 'SERVICE_DESCRIPTION' | translate }}</p>
   <div class="row">
     <div class="col-md-3" *ngFor="let service of services">
@@ -23,9 +23,10 @@
         <div class="card-body">
           <h5 class="card-title">{{ service.title }}</h5>
           <p class="card-text">{{ service.description }}</p>
-          <p class="card-text"><strong>Price: {{ service.price }}</strong></p>
           <div class="d-flex justify-content-between align-items-center">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" [routerLink]="['/', service.path]">
+              Details
+            </button>
           </div>
         </div>
       </div>
@@ -36,7 +37,7 @@
 
 <!-- About us -->
 <div id="about-section" class="about-section container mt-5">
-  <h2 class="text-center">{{ 'ABOUT_TITLE' | translate }}</h2>
+  <h1 class="text-center">{{ 'ABOUT_TITLE' | translate }}</h1>
   <p class="text-center">{{ 'ABOUT_DESCRIPTION' | translate }}</p>
   <div class="row align-items-center">
     <!-- Left Column - Image -->
@@ -45,11 +46,16 @@
     </div>
     <!-- Right Column - Description -->
     <div class="col-md-6 animate-right">
-      <h3>{{ 'ABOUT_US_HEADING' | translate }}</h3>
-      <p>{{ 'ABOUT_US_DESCRIPTION' | translate }}</p>
+      <div class="timeline">
+        <div class="timeline-item" *ngFor="let event of timelineEvents">
+          <div class="timeline-year bubble">{{ event.year }}</div>
+          <div class="timeline-content" *ngIf="event.isActive">{{ event.content | translate }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
 
 
