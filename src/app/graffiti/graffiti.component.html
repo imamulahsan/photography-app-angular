@@ -1,6 +1,20 @@
 <div class="quilted-image-list">
-    <div *ngFor="let image of images" [ngClass]="image.size">
-      <img [src]="image.src" alt="Graffiti Art" class="img-fluid">
+  <div *ngFor="let image of images" [ngClass]="image.size" (click)="openModal(image)">
+    <img [src]="image.src" alt="Graffiti Art" class="img-fluid">
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" [ngClass]="{'show': selectedImage}" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img [src]="selectedImage?.src" alt="Graffiti Art" class="modal-image">
+    <div class="modal-details">
+      <h2>{{ selectedImage?.title }}</h2>
+      <p>Created by: {{ selectedImage?.artist }}</p>
     </div>
   </div>
+</div>
+
+
   
