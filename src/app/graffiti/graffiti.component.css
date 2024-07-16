@@ -34,7 +34,6 @@
   grid-row: span 1;
 }
 
-
 /* Modal styling */
 .modal {
   display: none;
@@ -55,7 +54,8 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: var(--modal-background-color-day);
+  color: var(--modal-text-color-day);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -63,12 +63,29 @@
   max-width: 600px;
   text-align: center;
   position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.night-mode .modal-content {
+  background-color: var(--modal-background-color-night);
+  color: var(--modal-text-color-night);
+}
+
+.image-container {
+  overflow: hidden; /* Ensure the image doesn't overflow the container */
+  border-radius: 8px; /* Match the image's border radius */
 }
 
 .modal-content img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  transition: transform 0.25s ease; /* Add transition for smooth zoom effect */
+}
+
+.modal-content img:hover {
+  transform: scale(1.2); /* Scale up the image on hover */
+  cursor: zoom-in; /* Change cursor to zoom-in */
 }
 
 .modal-details {
@@ -90,13 +107,4 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* Add zoom effect on hover */
-.modal-content img {
-  transition: transform 0.25s ease;
-}
-
-.modal-content img:hover {
-  transform: scale(1.2);
 }

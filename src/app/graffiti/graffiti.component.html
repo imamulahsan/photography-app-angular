@@ -8,13 +8,16 @@
 <div class="modal" [ngClass]="{'show': selectedImage}" (click)="closeModal()">
   <div class="modal-content" (click)="$event.stopPropagation()">
     <span class="close" (click)="closeModal()">&times;</span>
-    <img [src]="selectedImage?.src" alt="Graffiti Art" class="modal-image">
+    <div class="image-container">
+      <img [src]="selectedImage?.src" alt="Graffiti Art" class="modal-image">
+    </div>
     <div class="modal-details">
       <h2>{{ selectedImage?.title }}</h2>
       <p>Created by: {{ selectedImage?.artist }}</p>
     </div>
   </div>
 </div>
+
 
 
   

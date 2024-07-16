@@ -12,6 +12,11 @@ body {
   --text-color-day: #000000;
   --background-color-night: #000000;
   --text-color-night: #ffffff;
+
+  --modal-background-color-day: #f9f9f9;
+  --modal-text-color-day: #000000;
+  --modal-background-color-night: #333333;
+  --modal-text-color-night: #ffffff;
 }
 
 body.day-mode {
