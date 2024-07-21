@@ -1,1 +1,13 @@
-<p>street-art-tours works!</p>
+
+<div class="slideshow-container" (wheel)="onScroll($event)">
+    <div class="image-wrapper">
+      <img [src]="images[currentImageIndex].url" alt="Street Art Image" class="slideshow-image">
+      <div class="text-overlay">
+        <h2>{{ images[currentImageIndex].title }}</h2>
+        <p>{{ images[currentImageIndex].description }}</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  

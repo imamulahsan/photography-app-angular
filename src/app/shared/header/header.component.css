@@ -1,74 +1,96 @@
 /* Ensure styles are compatible with both day and night modes */
 .navbar {
-    width: 100%;
-    background-color: var(--background-color-day); /* Default to day background */
-  }
-  
-  .navbar.day-mode {
-    background-color: var(--background-color-day);
-  }
-  
-  .navbar.night-mode {
-    background-color: var(--background-color-night);
-  }
-  
+  width: 100%;
+  background-color: var(--background-color-day); /* Default to day background */
+}
+
+.navbar.day-mode {
+  background-color: var(--background-color-day);
+}
+
+.navbar.night-mode {
+  background-color: var(--background-color-night);
+}
+
+.navbar-brand img {
+  height: 100px;
+  width: auto; /* Maintain aspect ratio */
+}
+
+.hover-effect {
+  width: 100%;
+  height: auto;
+  transition: filter 0.5s ease;
+}
+
+.hover-effect:hover {
+  filter: grayscale(100%); /* For grayscale effect */
+  filter: invert(100%);
+}
+
+@media (max-width: 768px) {
   .navbar-brand img {
-    height: 100px;
-    width: auto; /* Maintain aspect ratio */
+    height: 20px; /* Smaller logo for smaller devices */
   }
-  
-  .hover-effect {
-    width: 100%;
-    height: auto;
-    transition: filter 0.5s ease;
-  }
-  
-  .hover-effect:hover {
-    filter: grayscale(100%); /* For grayscale effect */
-    filter: invert(100%);
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-brand img {
-      height: 20px; /* Smaller logo for smaller devices */
-    }
+}
+
+.navbar-nav {
+  font-size: 18px; /* Larger font size */
+}
+
+.nav-item {
+  padding: 10px 15px; /* Larger padding */
+}
+
+.nav-link {
+  font-weight: bold; /* Makes the text bold */
+  color: var(--text-color-day); /* Default to day color */
+}
+
+.navbar.day-mode .nav-link {
+  color: var(--text-color-day);
+}
+
+.navbar.night-mode .nav-link {
+  color: var(--text-color-night);
+}
+
+.btn-link {
+  color: inherit; /* Ensure button color inherits from the current theme */
+  text-decoration: none; /* Remove underline from link styled button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: flex !important;  /* Ensure flexbox is used */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Center items horizontally */
   }
   
   .navbar-nav {
-    font-size: 18px; /* Larger font size */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center; /* Center nav items */
   }
   
   .nav-item {
-    padding: 10px 15px; /* Larger padding */
+    padding: 8px 10px; /* Smaller padding on mobile */
   }
-  
-  .nav-link {
-    font-weight: bold; /* Makes the text bold */
-    color: var(--text-color-day); /* Default to day color */
-  }
-  
-  .navbar.day-mode .nav-link {
-    color: var(--text-color-day);
-  }
-  
-  .navbar.night-mode .nav-link {
-    color: var(--text-color-night);
-  }
-  
-  .btn-link {
-    color: inherit; /* Ensure button color inherits from the current theme */
-    text-decoration: none; /* Remove underline from link styled button */
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .navbar-nav {
-      font-size: 16px; /* Smaller font size on mobile */
-    }
-    .nav-item {
-      padding: 8px 10px; /* Smaller padding on mobile */
-    }
-  }
-  
+}
 
+@media (max-width: 576px) {
+  .nav-item {
+    padding: 6px 8px; /* Smaller padding for very small devices */
+  }
+}
 
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-toggler {
+  background-color: white; /* Set background color to white */
+  border-color: white; /* Optional: set border color to white to match */
+}

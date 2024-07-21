@@ -16,38 +16,32 @@ export class HomeComponent {
   timelineEvents = [
     { year: '2004', content: 'TIMELINE_2004', isActive: true},
     { year: '2007', content: 'TIMELINE_2007', isActive: true },
-    { year: '2007', content: 'TIMELINE_2007', isActive: true },
-    { year: '2007', content: 'TIMELINE_2007', isActive: true },
-    { year: '2007', content: 'TIMELINE_2007', isActive: true },
+    { year: '2009', content: 'TIMELINE_2009', isActive: true },
+    { year: '2018', content: 'TIMELINE_2018', isActive: true },
     // Add more timeline events as needed
   ];
 
   services = [
     {
-      title: 'Graffiti Art',
-      description: 'Custom graffiti designs for private and public clients.',
+      title: 'Graffiti_Art_Title',
+      description: 'Graffiti_Art_Description',
       image: 'assets/images/graffiti.jpg',
       path: 'graffiti'
     },
     {
-      title: 'Live Painting Events',
-      description: 'Live art creation for corporate events, product launches, and team-building activities.',
+      title: 'Live_Painting_Events_Title',
+      description: 'Live_Painting_Events_Description',
       image: 'assets/images/live-art.jpg',
       path: 'live-painting'
     },
     {
-      title: 'Street Art Tours',
-      description: 'Tours of famous street art locations in German cities, providing historical context and artist insights.',
+      title: 'Street_Art_Tours_Title',
+      description: 'Street_Art_Tours_Description',
       image: 'assets/images/street-art.jpg',
       path: 'street-art-tours'
     },
-    {
-      title: 'Street Art Courses',
-      description: 'Workshops on the history and techniques of street art for schools and interested groups.',
-      image: 'assets/images/art-course.jpg',
-      path: 'street-art-courses'
-    }
   ];
+
  
 
   constructor() {}

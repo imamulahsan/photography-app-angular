@@ -1,17 +1,25 @@
 {
     "HOME": "Home",
     "SERVICES": "Services",
-    "ABOUT": "About",
+    "ABOUT": "About Us",
     "CONTACT": "Contact",
     "TOGGLE_THEME": "Toggle Day/Night Mode",
     "HOME_TITLE": "Urban Ink",
   "HOME_DESCRIPTION": "Discover and celebrate the creativity of street artists worldwide.",
   "SERVICE_TITLE": "Our Services",
-  "SERVICE_DESCRIPTION": "We provides specialized Services all over Gemany",
+  "SERVICE_DESCRIPTION": "We provide specialized services related to Art and Culture all over Germany",
+  "Graffiti_Art_Title": "Graffiti Art",
+  "Graffiti_Art_Description": "Custom graffiti designs for private and public clients.",
+  "Live_Painting_Events_Title": "Live Painting Events",
+  "Live_Painting_Events_Description": "Live art creation for corporate events, product launches, and team-building activities.",
+  "Street_Art_Tours_Title": "Street Art Tours",
+  "Street_Art_Tours_Description": "Tours of famous street art locations in German cities, providing historical context and artist insights.",
+  "DETAILS": "Details",
   "ABOUT_TITLE": "About Us",
-  "ABOUT_DESCRIPTION": "Urban Ink is nothing but about the people ",
-  "ABOUT_US_HEADING": "Our Mission",
-  "ABOUT_US_DESCRIPTION": "We aim to provide exceptional service and high-quality products to our customers.",
-  "TIMELINE_2004": "Creation of Urban Ink",
-  "TIMELINE_2007": "Started education in 2007"
+  "ABOUT_DESCRIPTION": "We have a specific mission to retain the culture and passion of Europe ",
+  "TIMELINE_2004": "The Idea of Urban Ink came to our mind",
+  "TIMELINE_2007": "Started a community of 18 members",
+  "TIMELINE_2009": "First office in Berlin",
+  "TIMELINE_2018": "Wurde eine Bildungseinrichtung"
+  
   }

@@ -4,6 +4,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { GraffitiComponent } from './graffiti/graffiti.component';
 import { LivePaintingComponent } from './live-painting/live-painting.component';
 import { StreetArtToursComponent } from './street-art-tours/street-art-tours.component';
-import { StreetArtCoursesComponent } from './street-art-courses/street-art-courses.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,12 +30,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     GraffitiComponent,
     LivePaintingComponent,
     StreetArtToursComponent,
-    StreetArtCoursesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    InfiniteScrollModule,
     CarouselModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

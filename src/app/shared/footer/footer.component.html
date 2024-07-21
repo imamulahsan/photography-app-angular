@@ -1,26 +1,30 @@
 <!-- footer.component.html -->
+<!-- footer.component.html -->
 <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-12">
-          <h5>About Us</h5>
-          <p>Information about the company.</p>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <h5>Quick Links</h5>
-          <ul>
-            <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/services">Services</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="/contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <h5>Contact Us</h5>
-          <p>Email: info.com</p>
-          <p>Phone: +1234567890</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <h5>Urban Ink</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
+      <div class="col-md-4 col-sm-12">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a (click)="scrollToSection('service-section')" routerLink="/" routerLinkActive="active">{{ 'SERVICES' | translate }}</a></li>
+          <li><a (click)="scrollToSection('about-section')" routerLink="/" routerLinkActive="active">{{ 'ABOUT' | translate }}</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:ahsanimamul808&#64;gmail.com">ahsanimamul808&#64;gmail.com</a></p>
+        <p>Phone: <a href="tel:017685979398">017685979398</a></p>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
   

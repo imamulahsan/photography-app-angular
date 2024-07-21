@@ -9,40 +9,40 @@ export class LivePaintingComponent implements OnInit {
 
   events = [
     {
-      title: 'To Defy. Crossing the Sun from a Great Pacific',
-      date: 'April 26 to September 1',
-      description: 'Caret',
-      image: 'path-to-image1.jpg'
+      title: 'Abstract Designs',
+      date: 'April 26',
+      description: 'Liverpool',
+      image: 'assets/images/live-1.jpg'
     },
     {
-      title: 'Kalabongó',
-      date: 'April 26 to September 1',
-      description: 'Caret',
-      image: 'path-to-image2.jpg'
+      title: 'Face Art',
+      date: 'May 18',
+      description: 'Berlin',
+      image: 'assets/images/live-2.jpg'
     },
     {
-      title: 'Tania Candiani. Offering',
-      date: 'April 26 to September 1',
-      description: 'Caret',
-      image: 'path-to-image3.jpg'
+      title: 'Nature and Animals',
+      date: 'January 2',
+      description: 'Prague',
+      image: 'assets/images/live-3.jpg'
     },
     {
-      title: 'Acoustic Fossil. Listening (With) the River',
-      date: 'April 26 to September 1',
-      description: 'Caret',
-      image: 'path-to-image4.jpg'
+      title: 'Calligraphy',
+      date: 'April 26',
+      description: 'Munich',
+      image: 'assets/images/live-4.jpg'
     },
     {
       title: 'Hernando Tejada. Return Journey',
-      date: 'April 26 to September 1',
+      date: 'Coming Soon',
       description: 'Caret',
-      image: 'path-to-image5.jpg'
+      image: 'assets/images/live-5.jpg'
     },
     {
       title: 'Versión libre. Events in the MAMM Collection',
       date: 'Until 2024',
       description: 'Caret',
-      image: 'path-to-image6.jpg'
+      image: 'assets/images/live-6.jpg'
     }
   ];
 
