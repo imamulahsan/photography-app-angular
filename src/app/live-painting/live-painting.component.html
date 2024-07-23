@@ -1,5 +1,5 @@
-<h1>Live Painting Events</h1>
-<p>Live art creation for corporate events, product launches, and team-building activities.</p>
+<h1 class="heading">Live Painting Events</h1>
+<p class="subheading">Live art creation for corporate events, product launches, and team-building activities.</p>
 
 <div class="events-container">
   <div *ngFor="let event of events" class="event-card">
@@ -8,7 +8,19 @@
       <h3>{{event.title}}</h3>
       <p>{{event.date}}</p>
       <p>{{event.description}}</p>
+      <button 
+        class="heart-button" 
+        [ngClass]="{'liked': event.liked}" 
+        (click)="onHeartClick(event)">
+        <i class="fas fa-heart"></i>
+      </button>
     </div>
   </div>
 </div>
 
+<h1 class="heading">Other Services</h1>
+
+<div class="button-container">
+  <button class="service-button" [routerLink]="['/graffiti']">Graffiti Art</button>
+  <button class="service-button" [routerLink]="['/street-art-tours']">Street Art Tour</button>
+</div>

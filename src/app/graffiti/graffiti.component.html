@@ -1,7 +1,17 @@
+<h1 class="heading">Graffiti Art</h1>
+<p class="subheading">Custom graffiti designs for private and public clients.</p>
+
 <div class="quilted-image-list">
   <div *ngFor="let image of images" [ngClass]="image.size" (click)="openModal(image)">
     <img [src]="image.src" alt="Graffiti Art" class="img-fluid">
   </div>
+</div>
+
+<h1 class="heading">Other Services</h1>
+
+<div class="button-container">
+  <button class="service-button" [routerLink]="['/live-painting']">Live Painting Events</button>
+  <button class="service-button" [routerLink]="['/street-art-tours']">Street Art Tour</button>
 </div>
 
 <!-- Modal -->
