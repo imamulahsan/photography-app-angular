@@ -43,8 +43,14 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 300px;
   margin: 10px;
+  background-color: #AF8A55; /* Light orange background */
+}
+
+.event-card:hover {
+  background-color: #8FA03E; /* Change background color on hover */
 }
 
 .event-image {
@@ -54,6 +60,7 @@
 
 .event-details {
   padding: 16px;
+  text-align: center; /* Center text */
   position: relative;
 }
 

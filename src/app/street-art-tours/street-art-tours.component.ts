@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 interface Image {
   url: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
 @Component({
@@ -22,12 +22,12 @@ export class StreetArtToursComponent implements OnInit {
   }
 
   loadImages() {
-    // Load initial set of images with titles and descriptions
+    // Load initial set of images with title and description keys
     for (let i = 1; i <= 5; i++) {
       this.images.push({
         url: `assets/images/live-${i}.jpg`,
-        title: `Title ${i}`,
-        description: `Description for image ${i}`
+        titleKey: `STREET_ART_TITLE_${i}`,
+        descriptionKey: `STREET_ART_DESCRIPTION_${i}`
       });
     }
   }

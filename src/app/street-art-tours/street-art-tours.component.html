@@ -1,23 +1,19 @@
-
-<h1 class="heading">Street Art Tours</h1>
-<p class="subheading">Tours of famous street art locations in German cities, providing historical context and artist insights.</p>
+<h1 class="heading">{{ 'STREET_ART_TOURS' | translate }}</h1>
+<p class="subheading">{{ 'STREET_ART_TOURS_DESCRIPTION' | translate }}</p>
 
 <div class="slideshow-container" (wheel)="onScroll($event)">
-    <div class="image-wrapper">
-      <img [src]="images[currentImageIndex].url" alt="Street Art Image" class="slideshow-image">
-      <div class="text-overlay">
-        <h2>{{ images[currentImageIndex].title }}</h2>
-        <p>{{ images[currentImageIndex].description }}</p>
-      </div>
+  <div class="image-wrapper">
+    <img [src]="images[currentImageIndex].url" alt="Street Art Image" class="slideshow-image">
+    <div class="text-overlay">
+      <h2>{{ images[currentImageIndex].titleKey | translate }}</h2>
+      <p>{{ images[currentImageIndex].descriptionKey | translate }}</p>
     </div>
   </div>
-  
-  
-  
-  <h1 class="heading">Other Services</h1>
+</div>
 
-  <div class="button-container">
-    <button class="service-button" [routerLink]="['/live-painting']">Live Painting</button>
-    <button class="service-button" [routerLink]="['/street-art-tours']">Street Art Tour</button>
-  </div>
-  
+<h1 class="heading">{{ 'OTHER_SERVICES' | translate }}</h1>
+
+<div class="button-container">
+  <button class="service-button" [routerLink]="['/live-painting']">{{ 'LIVE_PAINTING' | translate }}</button>
+  <button class="service-button" [routerLink]="['/street-art-tours']">{{ 'STREET_ART_TOUR' | translate }}</button>
+</div>

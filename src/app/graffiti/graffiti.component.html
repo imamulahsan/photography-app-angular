@@ -1,5 +1,5 @@
-<h1 class="heading">Graffiti Art</h1>
-<p class="subheading">Custom graffiti designs for private and public clients.</p>
+<h1 class="heading">{{ 'GRAFFITI_ART' | translate }}</h1>
+<p class="subheading">{{ 'GRAFFITI_DESCRIPTION' | translate }}</p>
 
 <div class="quilted-image-list">
   <div *ngFor="let image of images" [ngClass]="image.size" (click)="openModal(image)">
@@ -7,11 +7,11 @@
   </div>
 </div>
 
-<h1 class="heading">Other Services</h1>
+<h1 class="heading">{{ 'OTHER_SERVICES' | translate }}</h1>
 
 <div class="button-container">
-  <button class="service-button" [routerLink]="['/live-painting']">Live Painting Events</button>
-  <button class="service-button" [routerLink]="['/street-art-tours']">Street Art Tour</button>
+  <button class="service-button" [routerLink]="['/live-painting']">{{ 'LIVE_PAINTING_EVENTS' | translate }}</button>
+  <button class="service-button" [routerLink]="['/street-art-tours']">{{ 'STREET_ART_TOUR' | translate }}</button>
 </div>
 
 <!-- Modal -->
@@ -22,12 +22,8 @@
       <img [src]="selectedImage?.src" alt="Graffiti Art" class="modal-image">
     </div>
     <div class="modal-details">
-      <h2>{{ selectedImage?.title }}</h2>
-      <p>Created by: {{ selectedImage?.artist }}</p>
+      <h2>{{ (selectedImage?.title || '') | translate }}</h2>
+      <p>{{ 'CREATED_BY' | translate }}: {{ selectedImage?.artist || '' }}</p>
     </div>
   </div>
 </div>
-
-
-
-  

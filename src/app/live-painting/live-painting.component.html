@@ -1,13 +1,13 @@
-<h1 class="heading">Live Painting Events</h1>
-<p class="subheading">Live art creation for corporate events, product launches, and team-building activities.</p>
+<h1 class="heading">{{ 'Live_Painting_Events_Title' | translate }}</h1>
+<p class="subheading">{{ 'Live_Painting_Events_Description' | translate }}</p>
 
 <div class="events-container">
   <div *ngFor="let event of events" class="event-card">
-    <img [src]="event.image" alt="{{event.title}}" class="event-image">
+    <img [src]="event.image" alt="{{ event.title | translate }}" class="event-image">
     <div class="event-details">
-      <h3>{{event.title}}</h3>
-      <p>{{event.date}}</p>
-      <p>{{event.description}}</p>
+      <h3>{{ event.title | translate }}</h3>
+      <p>{{ event.date }}</p>
+      <p>{{ event.description | translate }}</p>
       <button 
         class="heart-button" 
         [ngClass]="{'liked': event.liked}" 
@@ -21,6 +21,6 @@
 <h1 class="heading">Other Services</h1>
 
 <div class="button-container">
-  <button class="service-button" [routerLink]="['/graffiti']">Graffiti Art</button>
+  <button class="service-button" [routerLink]="['/graffiti']">Graffiti Arts</button>
   <button class="service-button" [routerLink]="['/street-art-tours']">Street Art Tour</button>
 </div>
