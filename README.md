@@ -1,3 +1,18 @@
+# Live Website
+https://photography-app-angular.netlify.app
+
+# A Angular based app for Street Artists
+> 1. Consists of streets art all over Europe
+> 2. Organisation Information
+> Live demo [Link](https://photography-app-angular.netlify.app)
+
+
+# Technologies Used
+- Angular
+- HTML5
+- CSS3
+- Typescript
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
